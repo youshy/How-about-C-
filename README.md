@@ -7,3 +7,5 @@ There's no other way than learning how to code in C++! Join me in this marvellou
 # Resources I've used
 
 - Absolutely amazing tutorial by Derek Banas - watch [HERE](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ9S8YSV0iDsuEU8v11yP9M)
+
+- Cheat sheet by Derek Banas - get it [HERE](http://www.newthinktank.com/2018/03/c-tutorial-26/)
