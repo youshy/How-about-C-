@@ -5,6 +5,7 @@
 #include <sstream>
 #include <limits>
 
+// because I'm lazy
 using namespace std;
 
 int main()
@@ -12,38 +13,38 @@ int main()
   // placeholder for calculator
   string firstNumber("Enter first number: ");
   string secondNumber("Enter second number: ");
-  string num1, num2;
+  string sNum1, sNum2;
 
   cout << firstNumber;
-  getline(cin, num1);
+  getline(cin, sNum1);
 
   cout << secondNumber;
-  getline(cin, num2);
+  getline(cin, sNum2);
 
-  double num1toNumber = stod(num1);
-  double num2toNumber = stod(num2);
+  double num1 = stod(sNum1);
+  double num2 = stod(sNum2);
 
   string operation("What operation you want to perform? (A)dd, (S)ubstract, (M)ultiply, (D)ivide?");
-  string whattodo;
+  string option;
 
   cout << operation << endl;
-  getline(cin, whattodo);
+  getline(cin, option);
 
-  if (whattodo == "A")
+  if (option == "A")
   {
-    printf("%.0f + %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber + num2toNumber));
+    printf("%.2f + %.2f = %.2f\n", num1, num2, (num1 + num2));
   }
-  else if (whattodo == "S")
+  else if (option == "S")
   {
-    printf("%.0f - %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber - num2toNumber));
+    printf("%.2f - %.2f = %.2f\n", num1, num2, (num1 - num2));
   }
-  else if (whattodo == "M")
+  else if (option == "M")
   {
-    printf("%.0f * %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber * num2toNumber));
+    printf("%.2f * %.2f = %.2f\n", num1, num2, (num1 * num2));
   }
-  else if (whattodo == "D")
+  else if (option == "D")
   {
-    printf("%.0f / %.0f = %.2f\n", num1toNumber, num2toNumber, (num1toNumber / num2toNumber));
+    printf("%.2f / %.2f = %.2f\n", num1, num2, (num1 / num2));
   }
   else
   {
