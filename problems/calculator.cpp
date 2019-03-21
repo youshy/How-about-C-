@@ -5,33 +5,49 @@
 #include <sstream>
 #include <limits>
 
+using namespace std;
+
 int main()
 {
   // placeholder for calculator
-  std::string firstNumber("Enter first number: ");
-  std::string secondNumber("Enter second number: ");
-  std::string num1, num2;
+  string firstNumber("Enter first number: ");
+  string secondNumber("Enter second number: ");
+  string num1, num2;
 
-  std::cout << firstNumber;
-  getline(std::cin, num1);
+  cout << firstNumber;
+  getline(cin, num1);
 
-  std::cout << secondNumber;
-  getline(std::cin, num2);
+  cout << secondNumber;
+  getline(cin, num2);
 
-  int num1toNumber = std::stoi(num1);
-  int num2toNumber = std::stoi(num2);
+  double num1toNumber = stod(num1);
+  double num2toNumber = stod(num2);
 
-  std::string operation("What operation you want to perform? (A)dd, (S)ubstract, (M)ultiply, (D)ivide?\n");
-  std::string func;
+  string operation("What operation you want to perform? (A)dd, (S)ubstract, (M)ultiply, (D)ivide?");
+  string whattodo;
 
-  std::cout << operation;
-  getline(std::cin, func);
+  cout << operation << endl;
+  getline(cin, whattodo);
 
-  std::string add("A");
-
-  if (operation == add)
+  if (whattodo == "A")
   {
-    printf("%d + %d = %d\n", num1toNumber, num2toNumber, (num1toNumber + num2toNumber));
+    printf("%.0f + %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber + num2toNumber));
+  }
+  else if (whattodo == "S")
+  {
+    printf("%.0f - %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber - num2toNumber));
+  }
+  else if (whattodo == "M")
+  {
+    printf("%.0f * %.0f = %.0f\n", num1toNumber, num2toNumber, (num1toNumber * num2toNumber));
+  }
+  else if (whattodo == "D")
+  {
+    printf("%.0f / %.0f = %.2f\n", num1toNumber, num2toNumber, (num1toNumber / num2toNumber));
+  }
+  else
+  {
+    printf("You haven't told me what you want to do...");
   }
 
   return 0;
